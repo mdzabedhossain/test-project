@@ -1,16 +1,14 @@
 {
-  "name": "test-project",
+  "name": "railway-ecommerce-store",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "A lightweight e-commerce demo designed for Railway deployment",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "dependencies": {
-    "dotenv": "^17.4.2"
-  }
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT"
 }
