@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ZabedBook</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top"><div class="brand">ZabedBook</div><input id="search" placeholder="Search ZabedBook"><nav><button>Home</button><button>Friends</button><button>Messages</button><button>🔔</button><button>👤</button></nav></header>
+<main class="layout">
+<aside class="side"><div class="profile"><div class="avatar big">ZH</div><b>Zabed Hossain</b></div><a>🏠 Feed</a><a>👥 Friends</a><a>💬 Messages</a><a>📷 Photos</a><a>🎥 Videos</a><a>⚙ Settings</a></aside>
+<section class="feed">
+<div class="composer"><div class="row"><div class="avatar">ZH</div><input id="postText" placeholder="What's on your mind, Zabed?"></div><div class="actions"><button onclick="addPost()">➕ Post</button><button>📷 Photo/Video</button><button>😊 Feeling</button></div></div>
+<div id="posts">
+<article class="post"><div class="row"><div class="avatar">AI</div><div><b>ZabedBook Team</b><small> · Today</small><p>Welcome to your new social space! This original Facebook-inspired demo is running live on Railway.</p></div></div><div class="postbar"><button onclick="like(this)">👍 Like <span>12</span></button><button>💬 Comment</button><button>↗ Share</button></div></article>
+<article class="post"><div class="row"><div class="avatar">ZH</div><div><b>Zabed Hossain</b><small> · Just now</small><p>Building modern apps with GitHub + Railway 🚀</p></div></div><div class="postbar"><button onclick="like(this)">👍 Like <span>4</span></button><button>💬 Comment</button><button>↗ Share</button></div></article>
+</div></section>
+<aside class="right"><h3>Contacts</h3><p>🟢 Rahim</p><p>🟢 Karim</p><p>🟢 Nusrat</p><h3>Shortcuts</h3><p>🚀 Projects</p><p>🛡 Security Lab</p></aside>
+</main>
+<script>
+function like(btn){const s=btn.querySelector('span');s.textContent=Number(s.textContent)+1;btn.classList.toggle('liked')}
+function addPost(){const input=document.getElementById('postText');const text=input.value.trim();if(!text)return;const article=document.createElement('article');article.className='post';article.innerHTML=`<div class="row"><div class="avatar">ZH</div><div><b>Zabed Hossain</b><small> · Just now</small><p></p></div></div><div class="postbar"><button onclick="like(this)">👍 Like <span>0</span></button><button>💬 Comment</button><button>↗ Share</button></div>`;article.querySelector('p').textContent=text;document.getElementById('posts').prepend(article);input.value=''}
+</script>
+</body></html>
